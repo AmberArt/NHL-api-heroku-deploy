@@ -31,7 +31,7 @@ public class PlayerController {
     public Iterable<Player> getAllPlayers(){ return playerService.findAll(); }
 
     @GetMapping("/{id}")
-    public Player getPlayerById(@PathVariable Integer id){ return playerService.findById(id); }
+    public Player getPlayerById(@PathVariable("id") Integer playerId){ return playerService.findById(playerId); }
 
 ////    curl localhost:4001/player/find?name=John
     @GetMapping("/find")
